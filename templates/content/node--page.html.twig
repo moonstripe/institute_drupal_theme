@@ -1,6 +1,9 @@
-<div class="w-full shadow pb-6">
-    <div class="h-[200px] flex flex-col">
+<div class="relative w-full shadow pb-6">
+    <div class="absolute top-0 left-0 h-[200px] flex flex-col w-full">
         {% if content.field_main_image %}{{ content.field_main_image }}{% endif %}
     </div>
-    <div class="mx-auto prose-md text-light w-1/2 mt-2 ">{{ content.body }}</div>
+    <div class="absolute w-full top-[150px]">
+        <h2 class="text-2xl font-mono font-bold w-1/2 mx-auto">{{ content.body['#object'].title.value }}</h2>
+    </div>
+    <div class="relative top-[50px] left-0 mx-auto prose-md text-light w-1/2 pt-[200px] ">{{ content.body }}</div>
 </div>

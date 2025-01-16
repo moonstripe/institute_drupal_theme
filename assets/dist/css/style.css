@@ -1079,6 +1079,14 @@ video {
   top: 0px;
 }
 
+.top-\[150px\] {
+  top: 150px;
+}
+
+.top-\[50px\] {
+  top: 50px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1123,10 +1131,6 @@ video {
 
 .mt-16 {
   margin-top: 4rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
 }
 
 .line-clamp-1 {
@@ -1260,6 +1264,10 @@ video {
 
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+
+.pt-\[200px\] {
+  padding-top: 200px;
 }
 
 .font-mono {
