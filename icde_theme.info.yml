@@ -1,7 +1,7 @@
 name: ICDE Theme
 type: theme
 description: "Theme for the Institute for Countering Digital Extremism"
-core_version_requirement: ^11.1
+core_version_requirement: ^10 || ^11
 base theme: stark
 libraries:
   - icde_theme/global
