@@ -1,0 +1,17 @@
+name: ICDE Theme
+type: theme
+description: "Theme for the Institute for Countering Digital Extremism"
+core_version_requirement: ^11.1
+base theme: stark
+libraries:
+  - icde_theme/global
+regions:
+  header: "Header"
+  primary_menu: "Primary Menu"
+  secondary_menu: "Secondary Menu"
+  featured: "Featured"
+  breadcrumb: "Breadcrumb"
+  content: "Content"
+  sidebar_first: "Sidebar First"
+  sidebar_second: "Sidebar Second"
+  footer: "Footer"

@@ -1,0 +1,25 @@
+{% set heading_id = attributes.id ~ '-menu'|clean_id %}
+<nav role="navigation"
+     class="w-full flex"
+     aria-labelledby="{{ heading_id }}"
+     {{ attributes|without('role', 'aria-labelledby') }}>
+    {# Label. If not displayed, we still provide it for screen readers. #}
+    {% if not configuration.label_display %}
+        {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+    {% endif %}
+    {{ title_prefix }}
+    <h2 {{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}
+    </h2>
+    {{ title_suffix }}
+    {# Menu. #}
+    {% block content %}
+        <ul class="flex mx-auto w-1/2 h-6 items-center">
+            {% set my_account = content['#items']['user.page'] %}
+            {% if my_account %}
+                {{ link(my_account.title, my_account.url, {"class": "font-mono text-sm text-slate-400 ml-auto mr-2"}) }}
+            {% endif %}
+            {% set logout = content['#items']['user.logout'] %}
+            {{ link(logout.title, logout.url, {"class": "font-mono text-sm text-slate-400 ml-2 mr-8"}) }}
+        </ul>
+    {% endblock %}
+</nav>

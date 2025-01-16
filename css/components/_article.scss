@@ -1,0 +1,64 @@
+@import "../base/_variables.scss";
+.article {
+  font-family: "Open Sans", sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-large;
+
+  &__header {
+    margin-bottom: $spacing-large;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: $spacing-medium;
+    }
+  }
+
+  &__meta {
+    color: lighten($color-text, 20%);
+    font-size: 0.9rem;
+    margin-bottom: $spacing-large;
+
+    .author {
+      font-weight: bold;
+    }
+
+    .date {
+      margin-left: $spacing-medium;
+    }
+  }
+
+  &__content {
+    font-family: $font-secondary;
+    font-size: 1.1rem;
+    line-height: 1.8;
+
+    h2 {
+      font-size: 1.8rem;
+      margin-top: $spacing-large * 2;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-top: $spacing-large * 1.5;
+    }
+
+    p {
+      margin-bottom: $spacing-medium;
+    }
+
+    blockquote {
+      margin: $spacing-large 0;
+      padding-left: $spacing-large;
+      border-left: 4px solid $color-accent;
+      font-style: italic;
+    }
+
+    .citation {
+      font-size: 0.9rem;
+      background: lighten($color-border, 5%);
+      padding: $spacing-small;
+      border-radius: 4px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{% set node = items[0].content['#entity'] %}
+<div class="w-full bg-[#57a6b2] border-black border-b-2">
+    <div class="mx-auto w-1/2 flex flex-col">
+        <div class="flex h-6 items-center text-ellipsis overflow-hidden">
+            <p class="text-sm font-light text-slate-200 my-auto mr-4">{{ node.field_date.value | date("m/d/y") }}</p>
+            <p class="text-sm font-light ml-4 text-white line-clamp-1">{{ node.field_announcement_text.value }}</p>
+        </div>
+    </div>
+</div>

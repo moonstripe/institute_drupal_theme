@@ -1,0 +1,41 @@
+html {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-family: $font-primary;
+  color: $color-text;
+  background-color: $color-background;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-secondary;
+  margin-top: $spacing-large;
+  margin-bottom: $spacing-medium;
+  line-height: 1.2;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($color-accent, 10%);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

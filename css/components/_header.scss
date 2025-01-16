@@ -1,0 +1,36 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $color-primary;
+  padding: $spacing-unit;
+  z-index: $z-index-header;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__inner {
+    max-width: $breakpoint-desktop;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__logo {
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    color: $color-background;
+
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  &__nav {
+    @media (max-width: $breakpoint-tablet - 1) {
+      display: none;
+    }
+  }
+}

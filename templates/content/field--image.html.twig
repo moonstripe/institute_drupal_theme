@@ -1,0 +1,5 @@
+{% set image = items[0].content['#item'] %}
+<img src="{{ file_url(image.entity.uri.value) }}"
+     alt="{{ image.alt }}"
+     loading="lazy"
+     class="object-cover w-full h-full opacity-10" />

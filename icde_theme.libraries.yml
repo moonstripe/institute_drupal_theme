@@ -1,0 +1,32 @@
+global:
+  version: 1.x
+  css:
+    theme:
+      assets/dist/css/style.css: {}
+      assets/dist/css/components/hero.css: {}
+  js:
+    assets/dist/js/global.js: {}
+
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+
+article:
+  version: 1.x
+  css:
+    component:
+      assets/dist/css/components/article.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+restricted:
+  version: 1.x
+  css:
+    component:
+      assets/dist/css/components/restricted.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - icde_theme/global

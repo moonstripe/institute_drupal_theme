@@ -1,0 +1,53 @@
+.main-nav {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: $spacing-medium;
+  }
+
+  &__item {
+    position: relative;
+
+    &.has-submenu {
+      &:hover .submenu {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-background;
+    font-size: 1.1rem;
+    padding: $spacing-small;
+
+    &:hover {
+      color: $color-accent;
+    }
+
+    &.active {
+      border-bottom: 2px solid $color-accent;
+    }
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: $color-primary;
+    min-width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: $z-index-dropdown;
+
+    &__item {
+      padding: $spacing-small;
+
+      &:hover {
+        background: lighten($color-primary, 10%);
+      }
+    }
+  }
+}

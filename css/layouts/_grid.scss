@@ -1,0 +1,39 @@
+.container {
+  max-width: $breakpoint-desktop;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+
+  @media (min-width: $breakpoint-wide) {
+    max-width: $breakpoint-wide - 200px;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: $spacing-large;
+
+  &--2col {
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--sidebar {
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-desktop) {
+      grid-template-columns: 2fr 1fr;
+      gap: $spacing-large * 2;
+    }
+  }
+
+  &--restricted {
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-desktop) {
+      grid-template-columns: 1fr 3fr;
+    }
+  }
+}

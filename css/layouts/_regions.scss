@@ -1,0 +1,19 @@
+.region {
+  &--header {
+    height: 80px; // Match header height
+    margin-bottom: $spacing-large;
+  }
+
+  &--content {
+    min-height: calc(
+      100vh - 80px - 400px
+    ); // Viewport height minus header and footer
+    padding: $spacing-large 0;
+  }
+
+  &--sidebar {
+    @media (max-width: $breakpoint-tablet - 1) {
+      margin-top: $spacing-large;
+    }
+  }
+}

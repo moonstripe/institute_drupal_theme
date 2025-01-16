@@ -1,0 +1,6 @@
+<div class="w-full shadow pb-6">
+    <div class="h-[200px] flex flex-col">
+        {% if content.field_main_image %}{{ content.field_main_image }}{% endif %}
+    </div>
+    <div class="mx-auto prose-md text-light w-1/2 mt-2 ">{{ content.body }}</div>
+</div>

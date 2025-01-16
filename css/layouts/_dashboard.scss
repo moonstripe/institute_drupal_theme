@@ -1,0 +1,27 @@
+.dashboard {
+  display: grid;
+  gap: $spacing-medium;
+
+  @media (min-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  &__card {
+    background: $color-background;
+    padding: $spacing-medium;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &__chart {
+    min-height: 300px;
+    background: $color-background;
+    padding: $spacing-medium;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: $breakpoint-desktop) {
+      grid-column: span 2;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.page {
+  padding-top: 80px; // Account for fixed header
+
+  &--front {
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      background: $color-primary;
+      color: $color-background;
+      margin-bottom: $spacing-large * 2;
+    }
+  }
+
+  &--article {
+    .article__wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: $spacing-large 0;
+    }
+  }
+
+  &--restricted {
+    background: lighten($color-border, 5%);
+
+    .restricted__sidebar {
+      background: $color-background;
+      padding: $spacing-medium;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .nav-menu {
+        position: sticky;
+        top: 100px;
+      }
+    }
+
+    .restricted__content {
+      background: $color-background;
+      padding: $spacing-large;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div class="layout-container">
+    {% if page.header %}
+        <header role="banner">
+            {{ page.header }}
+        </header>
+    {% endif %}
+    {% if page.primary_menu %}{{ page.primary_menu }}{% endif %}
+    {% if page.featured %}{{ page.featured }}{% endif %}
+    <main role="main">
+        {% if page.hero %}{{ page.hero }}{% endif %}
+    </main>
+    {% if page.footer %}
+        <footer role="contentinfo">
+            {{ page.footer }}
+        </footer>
+    {% endif %}
+</div>
