@@ -1,4 +1,4 @@
 <footer class="flex flex-col w-full mt-16">
-    <div class="flex w-1/2 mx-auto">{{ content }}</div>
+    {% if content %}<div class="flex w-1/2 mx-auto">{{ content }}</div>{% endif %}
     <div class="flex w-1/2 mx-auto">&copy;{{ 'now'|date("Y") }} Institute for Countering Digital Extremism</div>
 </footer>
