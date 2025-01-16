@@ -17,9 +17,11 @@
             {% set my_account = content['#items']['user.page'] %}
             {% if my_account %}
                 {{ link(my_account.title, my_account.url, {"class": "font-mono text-sm text-slate-400 ml-auto mr-2"}) }}
+                {% set logout = content['#items']['user.logout'] %}
+                {{ link(logout.title, logout.url, {"class": "font-mono text-sm text-slate-400 ml-2 mr-8"}) }}
+            {% else %}
+                <div class="invisible ml-auto mr-2"></div>
             {% endif %}
-            {% set logout = content['#items']['user.logout'] %}
-            {{ link(logout.title, logout.url, {"class": "font-mono text-sm text-slate-400 ml-2 mr-8"}) }}
         </ul>
     {% endblock %}
 </nav>

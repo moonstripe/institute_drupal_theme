@@ -1059,6 +1059,10 @@ video {
   margin-bottom: 0;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .absolute {
   position: absolute;
 }
