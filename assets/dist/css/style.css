@@ -1092,11 +1092,6 @@ video {
   margin-right: auto;
 }
 
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
@@ -1239,6 +1234,10 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-2 {
@@ -1433,6 +1432,10 @@ video {
 
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
   }
 
   .md\:text-2xl {
