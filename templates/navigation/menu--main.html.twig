@@ -20,21 +20,25 @@
 {% endmacro %}
 <div class="w-full border-y-2 border-black">
     <div class="flex flex-row mx-auto w-4/5 md:w-1/2">
+        <!-- branding   -->
         <div id="logo-block" class="ml-0 mr-auto py-2">
-            {% if logo %}
-                <a href="{{ path("<front>") }}" class=" mr-auto my-auto" rel="home">
-                    <img src="{{ logo }}" alt="{{ 'Home'|t }}" class="my-auto" />
-                </a>
-            {% else %}
-                <a href="{{ path("<front>") }}"
-                   class="flex mr-auto my-auto text-[#001524]"
-                   rel="home">
-                    <i data-lucide="waypoints" class="my-auto w-8 h-8 md:w-16 md:h-16"></i>
-                    <h2 class="font-sans ml-4 hidden md:block md:text-4xl font-bold my-auto md:leading-4 md:tracking-widest">ICDE</h2>
-                </a>
-            {% endif %}
+            <a href="{{ path("<front>") }}"
+               class="flex mr-auto my-auto space-x-2 text-[#001524]"
+               rel="home">
+                <img src="{{ logo_url }}"
+                     alt="institute logo"
+                     class="my-auto w-8 h-8 md:w-16 md:h-16" />
+                <div class="flex flex-col md:w-[10vw]">
+                    <img src="/sites/default/files/2025-01/ICDE.png"
+                         alt="ICDE"
+                         class="md:w-full mt-0 mb-auto" />
+                    <img src="/sites/default/files/2025-01/Text.png"
+                         alt="Institute for Countering Digital Extremism"
+                         class="md:w-full mt-auto mb-0" />
+                </div>
+            </a>
         </div>
-        <nav class="flex items-center  md:mr-8"
+        <nav class="flex items-center md:mr-8"
              role="navigation"
              aria-label="{{ 'Main navigation'|t }}">
             {{ menus.menu_links(items, 0) }}

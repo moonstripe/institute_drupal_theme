@@ -1097,16 +1097,20 @@ video {
   margin-bottom: auto;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
 .ml-0 {
   margin-left: 0px;
 }
 
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.ml-4 {
-  margin-left: 1rem;
 }
 
 .ml-auto {
@@ -1121,8 +1125,16 @@ video {
   margin-right: auto;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
 .mt-16 {
   margin-top: 4rem;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .line-clamp-1 {
@@ -1194,6 +1206,12 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
@@ -1388,10 +1406,6 @@ video {
     margin-right: 2rem;
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:h-16 {
     height: 4rem;
   }
@@ -1404,14 +1418,17 @@ video {
     width: 4rem;
   }
 
+  .md\:w-\[10vw\] {
+    width: 10vw;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .md\:text-base {
@@ -1422,13 +1439,5 @@ video {
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .md\:leading-4 {
-    line-height: 1rem;
-  }
-
-  .md\:tracking-widest {
-    letter-spacing: 0.1em;
   }
 }
