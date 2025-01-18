@@ -7,7 +7,7 @@
                 {% set item_classes = ['group transition-colors items-center duration-300 ease-in-out hover:bg-blue-100 text-sm md:text-base','flex','border-black','border-l-2','relative','group',item.is_expanded ? 'has-submenu', item.is_collapsed ? 'is-collapsed',item.in_active_trail ? 'text-blue-500 font-semibold' : ''] %}
                 <div {{ item.attributes.addClass(item_classes) }}>
                     <a href={{ item.url }} class="w-full h-full flex">
-                        <li class="group-hover:text-blue-400 px-2 my-auto text-gray-800 my-auto hover:text-blue-800','transition-colors duration-300 ease-in-out">
+                        <li class="group-hover:text-blue-400 px-2  text-gray-800 my-auto hover:text-blue-800','transition-colors duration-300 ease-in-out">
                             {{ item.title }}
                             {% if item.below %}{{ menus.menu_links(item.below, menu_level + 1) }}{% endif %}
                         </li>
@@ -19,22 +19,22 @@
     {% endif %}
 {% endmacro %}
 <div class="w-full border-y-2 border-black">
-    <div class="flex flex-row mx-auto w-4/5 md:w-1/2">
+    <div class="flex flex-row mx-auto w-4/5 md:w-1/2 space-x-2">
         <!-- branding   -->
-        <div id="logo-block" class="ml-0 mr-auto py-2">
+        <div id="logo-block" class="ml-0 mr-auto my-1 md:my-4 mr">
             <a href="{{ path("<front>") }}"
                class="flex mr-auto my-auto space-x-2 text-[#001524]"
                rel="home">
                 <img src="/sites/default/files/Logo.svg"
                      alt="institute logo"
-                     class="my-auto w-8 h-8 md:w-16 md:h-16" />
+                     class="my-auto w-10 h-10 md:w-16 md:h-16" />
                 <div class="flex flex-col md:w-[10vw]">
                     <img src="/sites/default/files/2025-01/ICDE.png"
                          alt="ICDE"
-                         class="md:w-full mt-0 mb-auto" />
+                         class="md:w-full md:mt-0 md:mb-auto my-auto" />
                     <img src="/sites/default/files/2025-01/Text.png"
                          alt="Institute for Countering Digital Extremism"
-                         class="md:w-full mt-auto mb-0" />
+                         class="md:w-full md:mt-auto md:mb-0 hidden md:block" />
                 </div>
             </a>
         </div>
