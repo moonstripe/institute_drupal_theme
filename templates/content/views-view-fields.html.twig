@@ -1,0 +1,15 @@
+<div class="relative flex flex-col col-span-1 border border-gray-200 bg-white shadow-md overflow-hidden w-full">
+    <div class="flex items-center text-sm text-gray-600 space-x-2 m-2">
+        {% if fields.uid %}<span class="font-medium ml-0 mr-auto">{{ fields.uid.content }}</span>{% endif %}
+        {% if fields.created %}
+            <span class="mr-0 ml-auto flex items-center text-xs"><i class="my-auto mr-2 w-4 h-4" data-lucide="calendar"></i>{{ fields.created.content }}</span>
+        {% endif %}
+    </div>
+    {% if fields.field_image %}
+        <div class="w-full my-0 not-prose overflow-y-hidden h-48 ">{{ fields.field_image.content }}</div>
+    {% endif %}
+    <div class="flex flex-col gap-2 px-4">
+        {% if fields.title %}<h3 class="text-lg font-semibold text-gray-900">{{ fields.title.content }}</h3>{% endif %}
+        {% if fields.body %}<p class="text-gray-600 font-light text-sm">{{ fields.body.content }}</p>{% endif %}
+    </div>
+</div>

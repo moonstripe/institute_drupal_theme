@@ -1,0 +1,10 @@
+{% block content %}
+    {% if title %}<h2>{{ title }}</h2>{% endif %}
+    {% if rows %}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {% for row in rows %}{{ row }}{% endfor %}
+        </div>
+    {% elseif empty %}
+        <p class="view-empty">{{ empty }}</p>
+    {% endif %}
+{% endblock %}

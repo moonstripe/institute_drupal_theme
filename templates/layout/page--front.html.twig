@@ -1,16 +1,9 @@
 <div class="layout-container">
-    {% if page.header %}
-        <header role="banner">
-            {{ page.header }}
-        </header>
-    {% endif %}
+    {% if page.header %}{{ page.header }}{% endif %}
     {% if page.primary_menu %}{{ page.primary_menu }}{% endif %}
     {% if page.featured %}{{ page.featured }}{% endif %}
     <main role="main">
         {% if page.hero %}{{ page.hero }}{% endif %}
     </main>
-    <footer class="flex flex-col w-full mt-16">
-        {% if page.footer %}<div class="flex w-1/2 mx-auto">{{ page.footer }}</div>{% endif %}
-        <div class="flex w-4/5 md:w-1/2 mx-auto">Institute for Countering Digital Extremism &copy; {{ 'now'|date("Y") }}</div>
-    </footer>
+    {% if page.footer %}{{ page.footer }}{% endif %}
 </div>

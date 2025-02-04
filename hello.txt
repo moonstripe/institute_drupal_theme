@@ -1,1 +1,0 @@
-Create a more unified templating structure by overhauling these documents, with a functioning front page

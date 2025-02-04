@@ -1,0 +1,35 @@
+{% import _self as menus %}
+{# Define macro for rendering menu items recursively #}
+{% macro menu_links(items, menu_level) %}
+    {% if items %}
+        {% if menu_level == 0 %}
+            <ul class="w-full flex h-48">
+                {% for item in items %}
+                    {% set item_classes = "w-full group mx-auto transition-colors items-center duration-300 ease-in-out text-sm md:text-base flex relative text-blue-500 font-semibold" %}
+                    <li {{ item.attributes.addClass(item_classes) }}>
+                        <div class="relative w-full flex flex-col group-hover:text-blue-400 text-gray-800 my-auto hover:text-blue-800 transition-colors duration-300 ease-in-out">
+                            <a class="w-full h-full" href={{ item.url }}>
+                                {{ item.title }}
+                            </a>
+                            {% if item.below %}{{ menus.menu_links(item.below, menu_level + 1) }}{% endif %}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <ul class="flex flex-col mx-auto w-full absolute top-6 left-0  bg-white text-xs pt-2 space-y-2">
+                {% for item in items %}
+                    {% set item_classes = "w-full transition-colors items-center duration-300 ease-in-out md:text-base flex text-blue-500 font-light" %}
+                    <li {{ item.attributes.addClass(item_classes) }}>
+                        <div class="w-full flex flex-col overflow-visible hover:text-blue-400 text-gray-800 my-auto  transition-colors duration-300 ease-in-out">
+                            <a class="w-full h-full" href={{ item.url }}>
+                                {{ item.title }}
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+{% endmacro %}
+<div class="mb-16 md:w-2/3 w-5/6 mx-auto flex">{{ menus.menu_links(items) }}</div>

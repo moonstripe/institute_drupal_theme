@@ -103,7 +103,7 @@ function icde_theme_preprocess_region(&$variables)
             $variables['site_name'] = $site_name;
         }
         if ($slogan) {
-            $variables['slogal'] = $slogan;
+            $variables['slogan'] = $slogan;
         }
 
     }
