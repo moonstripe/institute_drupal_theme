@@ -22,7 +22,7 @@
                     {% for item in items %}
                         {% set item_classes = "w-full transition-colors items-center duration-300 ease-in-out md:text-base flex text-blue-500 font-light" %}
                         <li {{ item.attributes.addClass(item_classes) }}>
-                            <div class="w-full mx-4 flex flex-col overflow-visible hover:text-blue-400 text-gray-800 my-auto  transition-colors duration-300 ease-in-out">
+                            <div class="w-full flex flex-col overflow-visible hover:text-blue-400 text-gray-800 my-auto  transition-colors duration-300 ease-in-out">
                                 <a class="w-full h-full" href={{ item.url }}>
                                     {{ item.title }}
                                 </a>
