@@ -3,9 +3,9 @@
 {% macro menu_links(items, menu_level) %}
     {% if items %}
         {% if menu_level == 0 %}
-            <ul class="flex ">
+            <ul class="flex w-full">
                 {% for item in items %}
-                    {% set item_classes = "w-full flex-col group mx-auto transition-colors items-center duration-300 ease-in-out text-sm md:text-base flex relative text-blue-500 font-semibold" %}
+                    {% set item_classes = "mx-auto w-full flex-col group mx-auto transition-colors items-center duration-300 ease-in-out text-sm md:text-base flex relative text-blue-500 font-semibold" %}
                     <li {{ item.attributes.addClass(item_classes) }}>
                         <div class="relative mx-auto w-full flex flex-col group-hover:text-blue-400 text-gray-800 my-auto hover:text-blue-800 transition-colors duration-300 ease-in-out">
                             <a class="mx-auto" href={{ item.url }}>
