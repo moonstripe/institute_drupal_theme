@@ -1151,10 +1151,6 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;

@@ -14,6 +14,7 @@ function icde_theme_preprocess_html(&$variables)
     if (\Drupal::currentUser()->isAuthenticated()) {
         $variables['attributes']['class'][] = 'user-authenticated';
     }
+    // dump(\Drupal::currentUser());
 }
 
 /**
@@ -22,7 +23,10 @@ function icde_theme_preprocess_html(&$variables)
 function icde_theme_preprocess_page(&$variables)
 {
     // Add library for restricted content if user has permission
+
     if (\Drupal::currentUser()->hasPermission('access restricted content')) {
+        // dump(\Drupal::currentUser());
+
         $variables['#attached']['library'][] = 'icde_theme/restricted';
     }
 }

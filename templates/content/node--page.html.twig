@@ -1,5 +1,5 @@
 <div class="relative w-full shadow pb-24 ">
-    <div class="absolute top-0 left-0 h-[200px] flex flex-col w-full border-black border-b-2">
+    <div class="absolute top-0 left-0 h-[200px] flex flex-col w-full border-black ">
         {% if content.field_main_image %}
             {% set image = content.field_main_image['#items'][0] %}
             <img src="{{ file_url(image.entity.uri.value) }}"
