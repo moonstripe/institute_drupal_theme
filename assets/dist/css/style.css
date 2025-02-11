@@ -1288,21 +1288,8 @@ video {
   overflow-y: hidden;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-2 {
   border-width: 2px;
-}
-
-.border-y-2 {
-  border-top-width: 2px;
-  border-bottom-width: 2px;
-}
-
-.border-b-2 {
-  border-bottom-width: 2px;
 }
 
 .border-black {
@@ -1315,9 +1302,9 @@ video {
   border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
 }
 
-.bg-\[\#57a6b2\] {
+.bg-dark-blue {
   --tw-bg-opacity: 1;
-  background-color: rgb(87 166 178 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 109 119 / var(--tw-bg-opacity, 1));
 }
 
 .bg-white {
@@ -1452,6 +1439,10 @@ video {
 
 .opacity-30 {
   opacity: 0.3;
+}
+
+.opacity-80 {
+  opacity: 0.8;
 }
 
 .shadow {
