@@ -6,6 +6,10 @@ module.exports = {
       fontFamily: {
         sans: ['"Open Sans"', "Helvetica", "Arial", "sans-serif"], // Custom sans-serif font stack
         serif: ["Merriweather", "serif"] // Custom serif font stack
+      },
+      colors: {
+        "dark-blue": "#006d77",
+        "light-blue": "#83c5be"
       }
     }
   },
